@@ -1,0 +1,9 @@
+$fz: 1rem;
+$bottom: bottom;
+.msg {
+	background:blue;
+	color:red;
+	font-size:$fz;
+	border: 1px solid red;
+	border-#{$bottom}-width:.2rem;
+}

@@ -1,0 +1,615 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+
+html,
+body {
+    font-size: 14px;
+    background-color: #f5f6fa;
+    line-height: 1.42857;
+    width: 100%;
+    height: 100%;
+    color: #303133;
+}
+
+nav,
+article,
+aside,
+details,
+main,
+header,
+footer,
+section,
+fieldset,
+figcaption,
+figure {
+    display: block;
+}
+
+img,
+a,
+button,
+em,
+del,
+strong,
+var,
+label,
+cite,
+small,
+time,
+mark,
+code,
+textarea {
+    display: inline-block;
+}
+
+header,
+section,
+footer {
+    position: relative;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+textarea {
+    border: 0;
+}
+
+input,
+a:active,
+a:hover {
+    outline: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+
+/*重写滚动条样式 for webkit浏览器*/
+
+
+/*滚动条整体部分，可以设置宽度啥的*/
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+}
+
+
+/*滚动条两端的按钮*/
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+
+/*外层轨道*/
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .5);
+    border: solid 1px #121212;
+    box-shadow: 0px 0px 3px #121212 inset;
+    border-radius: 8px;
+}
+
+
+/*内层滚动槽*/
+
+::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+}
+
+
+/*滚动的滑块*/
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .3);
+    border-radius: 8px;
+}
+
+
+/*滚动的滑块,鼠标放上时*/
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, .5);
+}
+
+
+/*禁止选中*/
+
+.no-select {
+    user-select: none;
+}
+
+
+/*中划线*/
+
+.line-through {
+    text-decoration: line-through
+}
+
+
+/*超出隐藏控制*/
+
+.text-warp {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.text-warp-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.text-warp-line2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.text-warp-line3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+
+/*盒模型*/
+
+.flex-warp {
+    display: flex;
+}
+
+.content-warp {
+    height: 100%;
+}
+
+.flex-con {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.flex-con-2 {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
+}
+
+.flex-con-3 {
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+    flex: 3;
+}
+
+.flex-vertical {
+    -webkit-box-orient: vertical;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+}
+
+
+/*元素居中*/
+
+.element-center {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/*清除浮动*/
+
+.clearfix:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/*常用样式*/
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+
+/* 主题色值 */
+
+.color-main {
+    color: #3598ff !important;
+}
+
+.color-success {
+    color: #37e696 !important;
+}
+
+.color-error {
+    color: #ff7a99 !important;
+}
+
+.color-waring {
+    color: #f5c72c !important;
+}
+
+.color-level-1 {
+    color: #303133 !important;
+}
+
+.color-level-2 {
+    color: #606266 !important;
+}
+
+.color-level-3 {
+    color: #909399 !important;
+}
+
+.color-level-4 {
+    color: #C0C4CC !important;
+}
+
+
+/* 卡片样式 */
+
+.card-out-title {
+    position: relative;
+    font-size: 16px;
+    line-height: 16px;
+    color: #3598ff;
+    font-weight: normal;
+    padding-left: 20px;
+    background: url(../assets/member/zhsq-1001.png) 7px center no-repeat;
+}
+
+.card-box {
+    /* min-height: 143px; */
+    padding: 20px;
+    margin-top: 16px;
+    background: #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -mz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-submit {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    margin-bottom: 0;
+}
+
+.card-box-search {
+    height: 42px;
+    overflow: hidden;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.paddingLeft48 {
+    padding-left: 48px;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginLeft20 {
+    margin-left: 20px;
+}
+
+.clear {
+    clear: both;
+    font-size: 1px;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    margin-top: 0px!important;
+    *margin-top: -1px;
+    line-height: 0;
+}
+
+.card-box-controller {
+    float: right;
+    margin-right: 20px;
+}
+
+.card-box-table {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-align: left;
+}
+
+.card-box-table .el-col {
+    height: 48px;
+    border-bottom: 1px solid #ebeef5;
+}
+
+.card-box-table-title {
+    font-size: 12px;
+    color: #909399;
+}
+
+.card-box-table-section {
+    font-size: 14px;
+    color: #606266;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+    will-change: transform;
+}
+
+.card-box-table-section a {
+    font-size: 14px;
+    color: #606266;
+}
+
+.card-box-table-section .table-img {
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 2px auto;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.card-box-table:nth-child(even) {
+    background: #fafafa;
+}
+
+.card-box-table-section:hover {
+    position: relative;
+    z-index: 10;
+    border: 0;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    -webkit-transform: translate3d(0, -3px, 0);
+    -moz-transform: translate3d(0, -3px, 0);
+    -ms-transform: translate3d(0, -3px, 0);
+    -o-transform: translate3d(0, -3px, 0);
+    transform: translate3d(0, -3px, 0);
+}
+
+.fenye {
+    float: right;
+    margin-top: 30px;
+}
+
+
+/* 浮动组件外框样式 */
+
+.fixBox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, .3);
+}
+
+.fixBox-section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -275px;
+    margin-top: -325px;
+    width: 546px;
+    height: 650px;
+    overflow: hidden;
+    /*overflow-y: auto;*/
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 20px 20px 20px;
+    -webkit-transition: margin-left 1s;
+    -moz-transition: margin-left 1s;
+    -ms-transition: margin-left 1s;
+    -o-transition: margin-left 1s;
+    transition: margin-left 1s;
+    will-change: margin-left;
+}
+
+.fixBox-section-title {
+    font-size: 16px;
+    color: #36383c;
+    line-height: 40px;
+    font-weight: normal;
+    border-bottom: 1px solid #ebeef5;
+}
+
+.fixBox-section-close {
+    float: right;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.fixBox-section-close img {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    display: block;
+    width: 16px;
+    height: 2px;
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    -ms-transition: transform .4s;
+    -o-transition: transform .4s;
+    transition: transform .4s;
+}
+
+.fixBox-section-close:hover img:first-child {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.fixBox-section-close:hover img:last-child {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.box-shadow {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+}
+
+
+/*外部通用title，右侧菜单容器*/
+
+.card-controller-warp {
+    position: relative;
+    float: right;
+}
+
+
+/* 日期函数兼容问题 */
+
+.el-date-editor .el-range-separator {
+    width: 20px;
+}
+
+
+/*设置浮动方式*/
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+
+/*通用关闭按钮*/
+
+.default-close {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    float: right;
+    cursor: pointer;
+}
+
+.default-close:before,
+.default-close:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 1px;
+    margin-left: -8px;
+    background-color: rgba(255, 255, 255, .5);
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+}
+
+.default-close:before {
+    transition: transform .2s ease, background-color .4s;
+    -webkit-transition: -webkit-transform .2s ease, background-color .4s;
+}
+
+.default-close:after {
+    transition: transform .6s ease, background-color .4s;
+    -webkit-transition: -webkit-transform .6s ease, background-color .4s;
+}
+
+.default-close:hover:before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.default-close:hover:after {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+/*重写树结构样式*/
+
+.cameras-list [aria-disabled="true"] .el-tree-node__content {
+    color: #909399 !important;
+    background-color: #FFFFFF !important;
+    cursor: no-drop;
+}
+
+
+/*设置播放器*/
+
+.vjs-control-text {
+    display: none !important;
+}

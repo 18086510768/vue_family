@@ -1,0 +1,96 @@
+/*密码重置*/
+.reset-container {
+	margin: auto;
+	width: 900px;
+	height: 100%;
+}
+.reset-footer {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+	font-size: 12px;
+	line-height: 50px;
+	letter-spacing: 1px;
+}
+.reset-header {
+	background: url(../../assets/reset/logo.png) no-repeat left center;
+	height: 150px;
+	line-height: 190px;
+}
+.reset-card {
+	width: 100%;
+	border-radius: 6px;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+.reset-card .reset-title {
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	color: #FFFFFF;
+	background-color: #3598ff;
+	font-size: 16px;
+}
+.reset-card .reset-subtitle {
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+}
+.reset-warp {
+	display: block;
+	width: 500px;
+	margin: 0 auto 20px;
+}
+.reset-input-warp {
+	margin-bottom: 0;
+	border: solid 1px #c1c4cd;
+	line-height: 50px;
+	background-color: #f3f6fd;
+	border-radius: 6px;
+	padding: 0 10px 0 40px;
+	background-repeat: no-repeat;
+	background-position: 11px center;
+	margin-bottom: 20px;
+	transition: all .3s;
+}
+.reset-input-warp:hover {
+	background-color: #ffffff;
+	border-color: #3b99fc;
+}
+.reset-input-warp input {
+	width: 100%;
+	background-color: transparent;
+	line-height: 50px;
+	background-position-x: 13px;
+}
+.reset-btn {
+	width: 100%;
+	margin: 10px 0;
+	height: 50px;
+}
+.reset-phone {
+	background-image: url(../../assets/reset/tele.png);
+}
+.reset-sms {
+	width: 330px;
+	margin-bottom: 0;
+	background-image: url(../../assets/reset/Verification-code.png);
+}
+.reset-pass {
+	background-image: url(../../assets/reset/pass.png);
+}
+.reset-check {
+	background-image: url(../../assets/reset/check.png);
+}
+.sms-space {
+	position: relative;
+	margin-bottom: 20px;
+}
+.sms-space .send-code {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 150px;
+	height: 50px;
+}
