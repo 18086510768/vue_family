@@ -16,6 +16,7 @@
       },
       methods: {
         back() {
+            let a,b,c,d = 0;
             this.$router.push({ path: '/first' });
         }
       }
